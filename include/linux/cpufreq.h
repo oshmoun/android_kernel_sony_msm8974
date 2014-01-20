@@ -378,11 +378,12 @@ extern struct cpufreq_governor cpufreq_gov_conservative;
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_INTERACTIVE)
 extern struct cpufreq_governor cpufreq_gov_interactive;
 #define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_interactive)
-<<<<<<< HEAD
-=======
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_INTELLIACTIVE)
 extern struct cpufreq_governor cpufreq_gov_intelliactive;
 #define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_intelliactive)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_WHEATLEY)
+extern struct cpufreq_governor cpufreq_gov_wheatley;
+#define CPUFREQ_DEFAULT_GOVERNOR  (&cpufreq_gov_wheatley)
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SMARTASSV2)
 extern struct cpufreq_governor cpufreq_gov_smartass2;
 #define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_smartass2)
@@ -393,7 +394,10 @@ extern struct cpufreq_governor cpufreq_gov_lionheart;
 extern struct cpufreq_governor cpufreq_gov_lagfree;
 #define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_lagfree)
 
+<<<<<<< HEAD
 >>>>>>> fddf50f... added new cpufreq governor SmartAssv2 (thanks to @Erasmux, @faux123 & @androdguide)
+=======
+>>>>>>> 25c4baf... cpufreq: intelliactive: initial coding and introduction!
 #endif
 
 
