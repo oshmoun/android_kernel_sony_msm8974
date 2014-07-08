@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #
 # NOTE! Don't add files that are generated in specific
 # subdirectories here. Add them in the ".gitignore" file
@@ -87,3 +88,6 @@ GTAGS
 
 # CAF files
 arch/arm/mach-msm/smd_rpc_sym.c
+=======
+*.swp
+>>>>>>> fb7dffa... leds-qpnp:Blink interpolation; qpnp-pwm driver fix
