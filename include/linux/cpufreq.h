@@ -399,17 +399,9 @@ extern struct cpufreq_governor cpufreq_gov_lionheart;
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_LAGFREE)
 extern struct cpufreq_governor cpufreq_gov_lagfree;
 #define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_lagfree)
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> fddf50f... added new cpufreq governor SmartAssv2 (thanks to @Erasmux, @faux123 & @androdguide)
-=======
->>>>>>> 25c4baf... cpufreq: intelliactive: initial coding and introduction!
-=======
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_INTELLIMM)
 extern struct cpufreq_governor cpufreq_gov_intellimm;
 #define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_intellimm)
->>>>>>> 5ad7ad1... cpufreq_intellimm: intelliminmax cpu governor initial baseline commit
 #endif
 
 
