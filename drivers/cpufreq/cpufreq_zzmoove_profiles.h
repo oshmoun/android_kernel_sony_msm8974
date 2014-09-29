@@ -75,10 +75,13 @@
  *  - added macros to disable hotplugging
  *  - adjusted values in all profiles for opo devices (not optimized just compatible -> WIP)
  *
+<<<<<<< HEAD
  * Version 0.3 beta2 OPO for governor Version 1.0 beta3
  *
  *  - corrected/adjusted sampling rate values in settings where they were lower than the minimal possible value of 60000
  *
+=======
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
  * currently available profiles by ZaneZam and Yank555:
  * ------------------------------------------------------------------------------------------------------------------------------------------
  * -  (1)'def'    -> Default              -> will set governor defaults                                                                     -
@@ -113,7 +116,11 @@
  */
 
 // NOTE: profile values in this version are mainly for One Plus One devices but might be compatible with other qualcomm devices too!
+<<<<<<< HEAD
 static char profiles_file_version[20] = "0.3 beta2 OPO";
+=======
+static char profiles_file_version[20] = "0.3 beta1 OPO";
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 #define PROFILE_TABLE_END ~1
 #define END_OF_PROFILES "end"
 
@@ -574,7 +581,11 @@ struct zzmoove_profile zzmoove_profiles[] = {
 		1,		// sampling_down_factor
 		0,		// sampling_down_max_momentum
 		50,		// sampling_down_momentum_sensitivity
+<<<<<<< HEAD
 		70000,		// sampling_rate
+=======
+		60000,		// sampling_rate
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 		180000,		// sampling_rate_idle
 		0,		// sampling_rate_idle_delay
 		40,		// sampling_rate_idle_threshold
@@ -955,7 +966,11 @@ struct zzmoove_profile zzmoove_profiles[] = {
 		4,		// sampling_down_factor
 		20,		// sampling_down_max_momentum
 		50,		// sampling_down_momentum_sensitivity
+<<<<<<< HEAD
 		70000,		// sampling_rate
+=======
+		45000,		// sampling_rate
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 		100000,		// sampling_rate_idle
 		0,		// sampling_rate_idle_delay
 		40,		// sampling_rate_idle_threshold
@@ -1082,7 +1097,11 @@ struct zzmoove_profile zzmoove_profiles[] = {
 		4,		// sampling_down_factor
 		20,		// sampling_down_max_momentum
 		50,		// sampling_down_momentum_sensitivity
+<<<<<<< HEAD
 		70000,		// sampling_rate
+=======
+		45000,		// sampling_rate
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 		100000,		// sampling_rate_idle
 		0,		// sampling_rate_idle_delay
 		40,		// sampling_rate_idle_threshold
@@ -1209,7 +1228,11 @@ struct zzmoove_profile zzmoove_profiles[] = {
 		4,		// sampling_down_factor
 		50,		// sampling_down_max_momentum
 		25,		// sampling_down_momentum_sensitivity
+<<<<<<< HEAD
 		60000,		// sampling_rate
+=======
+		40000,		// sampling_rate
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 		100000,		// sampling_rate_idle
 		0,		// sampling_rate_idle_delay
 		40,		// sampling_rate_idle_threshold
@@ -1336,7 +1359,11 @@ struct zzmoove_profile zzmoove_profiles[] = {
 		4,		// sampling_down_factor
 		80,		// sampling_down_max_momentum
 		15,		// sampling_down_momentum_sensitivity
+<<<<<<< HEAD
 		60000,		// sampling_rate
+=======
+		40000,		// sampling_rate
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 		100000,		// sampling_rate_idle
 		0,		// sampling_rate_idle_delay
 		40,		// sampling_rate_idle_threshold
@@ -1463,7 +1490,11 @@ struct zzmoove_profile zzmoove_profiles[] = {
 		4,		// sampling_down_factor
 		60,		// sampling_down_max_momentum
 		20,		// sampling_down_momentum_sensitivity
+<<<<<<< HEAD
 		60000,		// sampling_rate
+=======
+		40000,		// sampling_rate
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 		100000,		// sampling_rate_idle
 		0,		// sampling_rate_idle_delay
 		40,		// sampling_rate_idle_threshold

@@ -554,6 +554,7 @@
  *	- added macros to exclude hotplugging functionality (default in this version is disabled=commented for opo devices because of mpdecision
  *	  in general and unmotivated kernel crashes when using it without mpdecision) in addition disable hopplugging per default if hotplugging
  *	  code is used to avoid accetential usage of mpdecision and buildin governor hotplugging at the same time
+<<<<<<< HEAD
  *
  * Version 1.0 beta2 (bugfix!)
  *
@@ -573,6 +574,8 @@
  *
  *	- removed all previous kernel crash fix attempts and precautions as only the real fix of canceling dbs work syncron introduced in beta3 is needed.
  *
+=======
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
  * ---------------------------------------------------------------------------------------------------------------------------------------------------------
  * -                                                                                                                                                       -
  * ---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -605,7 +608,11 @@
 #endif
 
 // Yank: enable/disable sysfs interface to display current zzmoove version
+<<<<<<< HEAD
 #define ZZMOOVE_VERSION "1.0 beta4"
+=======
+#define ZZMOOVE_VERSION "1.0 beta1"
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 
 // ZZ: support for 2,4 or 8 cores (this will enable/disable hotplug threshold tuneables)
 #define MAX_CORES					(4)
@@ -614,7 +621,11 @@
 // #define ENABLE_HOTPLUGGING
 
 // ZZ: enable for sources with backported cpufreq implementation of 3.10 kernel
+<<<<<<< HEAD
 // #define CPU_IDLE_TIME_IN_CPUFREQ
+=======
+#define CPU_IDLE_TIME_IN_CPUFREQ
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 
 // ZZ: include profiles header file and set name for 'custom' profile (informational for a changed profile value)
 #include "cpufreq_zzmoove_profiles.h"
@@ -4740,8 +4751,15 @@ static struct attribute_group dbs_attr_group = {
 
 static void dbs_check_cpu(struct cpu_dbs_info_s *this_dbs_info)
 {
+<<<<<<< HEAD
 	unsigned int j, load = 0, max_load = 0;
 	struct cpufreq_policy *policy;
+=======
+	unsigned int load = 0;
+	unsigned int max_load = 0;
+	struct cpufreq_policy *policy;
+	unsigned int j;
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 
 	boost_freq = false;					// ZZ: reset early demand boost freq flag
 #ifdef ENABLE_HOTPLUGGING
@@ -5155,8 +5173,13 @@ static void dbs_check_cpu(struct cpu_dbs_info_s *this_dbs_info)
 		    > dbs_tuners_ins.freq_limit)
 		    this_dbs_info->requested_freq = dbs_tuners_ins.freq_limit;
 
+<<<<<<< HEAD
 		    __cpufreq_driver_target(policy, this_dbs_info->requested_freq,
 			    CPUFREQ_RELATION_L);							// ZZ: changed to relation low
+=======
+		__cpufreq_driver_target(policy, this_dbs_info->requested_freq,
+			CPUFREQ_RELATION_L);							// ZZ: changed to relation low
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 		return;
 	}
 }
@@ -5332,7 +5355,11 @@ static inline void dbs_timer_init(struct cpu_dbs_info_s *dbs_info)
 static inline void dbs_timer_exit(struct cpu_dbs_info_s *dbs_info)
 {
 	dbs_info->enable = 0;
+<<<<<<< HEAD
 	cancel_delayed_work_sync(&dbs_info->work);
+=======
+	cancel_delayed_work(&dbs_info->work);		// ZZ: use asyncronous mode to avoid freezes/reboots when leaving zzmoove
+>>>>>>> 97e7180... cpufreq: Add zzmoove governor v1.0 beta1
 #ifdef CONFIG_EXYNOS4_EXPORT_TEMP
 	cancel_delayed_work(&tmu_read_work);		// ZZ: cancel cpu temperature reading
 #endif
