@@ -1296,7 +1296,7 @@ static void dbs_freq_increase(struct cpufreq_policy *p, unsigned int freq)
 			CPUFREQ_RELATION_L : CPUFREQ_RELATION_H);
 }
 
-int set_two_phase_freq(int cpufreq)
+static int set_two_phase_freq(int cpufreq)
 {
 	int i  = 0;
 	for ( i = 0 ; i < NR_CPUS; i++)
@@ -2123,7 +2123,7 @@ int set_input_event_min_freq(int cpufreq)
 	return 0;
 }
 
-void set_input_event_min_freq_by_cpu ( int cpu_nr, int cpufreq){
+static void set_input_event_min_freq_by_cpu ( int cpu_nr, int cpufreq){
 	input_event_min_freq_array[cpu_nr-1] = cpufreq;
 }
 
