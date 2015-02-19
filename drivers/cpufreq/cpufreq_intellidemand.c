@@ -1304,7 +1304,7 @@ static int set_two_phase_freq(int cpufreq)
 	return 0;
 }
 
-void set_two_phase_freq_by_cpu ( int cpu_nr, int cpufreq){
+static void set_two_phase_freq_by_cpu ( int cpu_nr, int cpufreq){
 	two_phase_freq_array[cpu_nr-1] = cpufreq;
 }
 
