@@ -247,10 +247,11 @@ HOSTCC       = gcc
 HOSTCXX      = g++
 HOSTCFLAGS = -Wall -Wmissing-prototypes -Wstrict-prototypes -Ofast -fomit-frame-pointer -fgcse-las
 HOSTCXXFLAGS = -Ofast -fgcse-las
-ifeq ($(ENABLE_GRAPHITE),true)
+
+# Optimizations
 HOSTCXXFLAGS += -fgraphite -floop-flatten -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block
 HOSTCFLAGS += -fgraphite -floop-flatten -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block
-endif
+
 
 # Decide whether to build built-in, modular, or both.
 # Normally, just do built-in.
