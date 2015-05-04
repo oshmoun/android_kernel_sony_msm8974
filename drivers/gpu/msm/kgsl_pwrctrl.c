@@ -214,7 +214,7 @@ void kgsl_pwrctrl_pwrlevel_change(struct kgsl_device *device,
 
 
 	trace_kgsl_pwrlevel(device, pwr->active_pwrlevel, pwrlevel->gpu_freq);
-<<<<<<< HEAD
+
 
 #if defined(CONFIG_CPU_FREQ_GOV_ELEMENTALX) || defined(CONFIG_CPU_FREQ_GOV_SLIM)
         graphics_boost = pwr->active_pwrlevel;
