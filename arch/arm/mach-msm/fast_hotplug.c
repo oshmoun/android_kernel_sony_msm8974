@@ -388,6 +388,7 @@ static struct input_handler hotplug_input_handler = {
 static int enable_fast_hotplug(const char *val, const struct kernel_param *kp){
 	int cpu;
 	int ret = param_set_bool(val, kp);
+	int rc;
 	
 	if(!fast_hotplug_enabled){
 		pr_info(HOTPLUG_INFO_TAG"Fast hotplug disabled\n");
@@ -413,7 +414,6 @@ static int enable_fast_hotplug(const char *val, const struct kernel_param *kp){
 
 		flush_workqueue(hotplug_wq);
 		
-		int rc;
 		rc = input_register_handler(&hotplug_input_handler);
 		init_timer(&unboost_timer);
 
@@ -494,3 +494,4 @@ static int __init hotplug_init(void)
 
 
 late_initcall(hotplug_init);
+
