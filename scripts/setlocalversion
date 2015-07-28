@@ -171,8 +171,14 @@ if test ! "$srctree" -ef .; then
 fi
 
 # CONFIG_LOCALVERSION and LOCALVERSION (if set)
+# Also add M5 Kernel Version (if set)
+# Add the "-V" if a Version is set so we only need to export the Version Number
 
-res="${res}${CONFIG_LOCALVERSION}${LOCALVERSION}"
+ifdef M5_VERSION
+M5_VERSION="-V${M5_VERSION}"
+endif
+
+res="${res}${CONFIG_LOCALVERSION}${LOCALVERSION}${M5_VERSION}"
 
 # scm version string if not at a tagged commit
 if test "$CONFIG_LOCALVERSION_AUTO" = "y"; then
