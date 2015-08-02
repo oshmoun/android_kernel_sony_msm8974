@@ -7,9 +7,11 @@ OLDLINE=$1
 NEWLINE=$2
 if( [ ! -z $OLDLINE ] && [ ! -z $NEWLINE ]  );
 then
-sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_rhine_amami_row_defconfig 
-sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_rhine_honami_row_defconfig 
-sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_shinano_sirius_defconfig 
-sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_shinano_leo_defconfig 
-sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_shinano_aries_defconfig 
+sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_rhine_amami_row_defconfig
+sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_rhine_honami_row_defconfig
+sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_shinano_sirius_defconfig
+sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_shinano_leo_defconfig
+sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_shinano_aries_defconfig
+sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_shinano_castor_defconfig
+sed -i s/${1}/${1}${LINEBREAK}${2}/ ${CONFIGPATH}cm_shinano_castor_windy_defconfig
 fi
