@@ -174,9 +174,9 @@ fi
 # Also add M5 Kernel Version (if set)
 # Add the "-V" if a Version is set so we only need to export the Version Number
 
-ifdef M5_VERSION
+if test -n M5_VERSION
 M5_VERSION="-V${M5_VERSION}"
-endif
+fi
 
 res="${res}${CONFIG_LOCALVERSION}${LOCALVERSION}${M5_VERSION}"
 
